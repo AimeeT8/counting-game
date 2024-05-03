@@ -9,15 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    
-   
-         
-    let questions = ["What is 2 x 2?", "What is 2 x 1?", "What is 5 x 5?", "What is 10 x 100?", "What is 10000 x 1?"]
-    
-    
-    
-    
-    
+     
     @State private var randomQuestion = Int.random(in: 0..<5)
     
     
@@ -31,21 +23,36 @@ struct ContentView: View {
     @State private var questionCount = 1
     
     
-    let numsOfQuestions = [5, 10, 15, 20, 25]
+   
+    @State private var numOfQuestions = 0
+  
+    let exactQuestions = [5, 10, 15, 20, 25]
     
-        
+    let questions = ["What is 2 x 2?", "What is 2 x 1?", "What is 5 x 5?", "What is 10 x 100?", "What is 10000 x 1?"]
     
     
     
     var body: some View {
-    
+        
+        
+        
+        
+        ZStack {
+            
+            LinearGradient(colors: [.teal, .gray], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .frame(width: .infinity, height: .infinity)
+                .ignoresSafeArea()
+            
+           
             
             
-        NavigationStack {
+            
             VStack {
                 Text("Math is fun!!")
-                    .font(.title)
+                    .font(.title).bold()
                     .padding()
+                
+                
                 Form {
                     
                     Section("Let's multiply!") {
@@ -58,16 +65,26 @@ struct ContentView: View {
                             }
                             
                         }
-                        
+                        Picker("How many games?", selection: $numOfQuestion) {
+                            ForEach(0..<exactQuestions.count, id: \.self) {
+                                Text("\(exactQuestions[$0])")
+                            }
+                        }
                         
                     }
-                    
+                   
                 }
+                
+                
+                .frame(width: 400, height: 200)
+                .padding()
+                
+                Spacer()
                 
                 Button {
                     // bring to a different view
                 }label: {
-                    Text("PLAY!")
+                    Text("PLAY!").bold()
                 }
                 .frame(width: 250, height: 50)
                 .background(.blue)
@@ -76,7 +93,7 @@ struct ContentView: View {
             }
         }
         
-                    
+    
                     
                 }
             }

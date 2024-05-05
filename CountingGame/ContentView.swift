@@ -39,13 +39,13 @@ struct QuestionAndAnswer {
 struct ContentView: View {
     
     
-  
     
-   
+    
+    
     
     
     @State private var multTable = 2
-     
+    
     @State private var numOfQuestions = 0
     @State private var numOfQuestion = 5
     let exactQuestions = [5, 10, 15, 20, 25]
@@ -76,8 +76,8 @@ struct ContentView: View {
         NavigationStack {
             
             ZStack {
-               
-                                    
+                
+                
                 
                 LinearGradient(colors: [.teal, .gray], startPoint: .topLeading, endPoint: .bottomTrailing)
                     .frame(width: .infinity, height: .infinity)
@@ -142,107 +142,14 @@ struct ContentView: View {
             
             
         }
-            
-            
-            //        if playingGame {
-            //            Section {
-            //                Text(displayQuestion)
-            //                Section {
-            //                    TextField("User answer", value: $userAnswer, format: .number)
-            //                    Button("Check Answer") {
-            //                        checkAnswer()
-            //                    }
-            //                }
-            //
-            //                Section {
-            //                    Text("Here is the score \(score)")
-            //                }
-            //            }
-            //            .onAppear(perform: setQuestion)
-            //            .alert(alertMessage, isPresented: $showAlert) {
-            //                Button("OK") {
-            //                    if gameOver {
-            //                        startNewGames()
-            //                    } else {
-            //
-            //                    }
-            //                }
-            //
-            //            }
-            //        }
-            //
-            //
-            //
-            //            .navigationTitle("CanUMiltiply")
-            //        }
-            //
-            //
-            //        func configureGame() {
-            //            playingGame = true
-            //            configuringGame = false
-            //            gameOver = false
-            //
-            //            var count = 0
-            //            while count < numOfQuestion {
-            //                let randomNum = Int.random(in: 0...12)
-            //                let problem = QuestionAndAnswer(operand1: multTable, operand2: randomNum)
-            //
-            //                let questionText = problem.questionText = problem.questionText
-            //                let questionAnswer = problem.answer
-            //
-            //                questionArray.append(questionText)
-            //                answerArray.append(questionAnswer)
-            //
-            //                count += 1
-//        }
-//    }
-//
-//        func setQuestion() {
-//            if currentQuestion != numOfQuestion {
-//                let displaysQuestion = questionArray[currentQuestion]
-//                displayQuestion = displaysQuestion
-//                
-//                let setAnswer = answerArray[currentQuestion]
-//                answer = setAnswer
-//                
-//                userAnswer = 0
-//            } else {
-//                showAlert = true
-//                alertMessage = "Game Over! Start Again?"
-//                gameOver = true
-//            }
-//        }
-//        
-//        func checkAnswer() {
-//            if answer == userAnswer {
-//                score += 1
-//                alertMessage = "Correct!"
-//            } else {
-//                score -= 1
-//                alertMessage = "Sorry the answer is \(answer)"
-//            }
-//            currentQuestion += 1
-//            showAlert = true
-//            setQuestion()
-//        }
-//        
-
-        
     }
-    
-    
-        
-//        func startNewGames() {
-//            currentQuestion = 0
-//            numOfQuestions = 0
-//            score = 0
-//            playingGame = false
-//           // configureGames = true
-//        }
+}
+            
+          
     
     
 
-}
+
           
 
 #Preview {

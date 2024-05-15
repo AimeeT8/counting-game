@@ -11,44 +11,54 @@ struct SecondView: View {
     
     @Environment(\.dismiss) var dismiss
     
-    let name: String
+    let name:String
+    @State private var count = 0
+   
+    
+    
     var body: some View {
-        Text("Hello \(name)")
+        
+        Form {
+           //text field to enter their name
+            
+            Text("Hello \(name)")
+            Text("What is the answer?")
+            
+            // text field with multiplication question
+            
+            // text field for answer
+            
+            
+            //button to check answer
+            
+            
+            
+        }
+        
         Button("Dismiss") {
             dismiss()
+               
         }
+        .frame(width: 250, height: 50)
+        .background(.blue)
+        .foregroundStyle(.white).bold()
+        .clipShape(.rect(cornerRadius: 20))
+        
         
     }
 }
 
 
 
-struct QuestionAndAnswer {
-    var operand1: Int
-    var operand2: Int
-    
-    var answer: Int {
-        operand1 * operand2
-    }
-    
-    var questionText: String {
-        "\(operand1) * \(operand2)"
-    }
-}
+
 
 struct ContentView: View {
-    
-    
-    
-    
-    
-    
-    
+      
     @State private var multTable = 2
     
     @State private var numOfQuestions = 0
     @State private var numOfQuestion = 5
-    let exactQuestions = [5, 10, 15, 20, 25]
+    @State private var exactQuestions = [5, 10, 15, 20, 25]
     
     @State private var questionArray = [String]()
     @State private var answerArray = [Int]()
@@ -95,7 +105,7 @@ struct ContentView: View {
                     
                     Form {
                         
-                        //   if configuringGame {
+                       
                         Section("Let's multiply!") {
                             
                             

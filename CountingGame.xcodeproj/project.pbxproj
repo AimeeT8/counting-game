@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C5E598C2BF5801E00F84C7A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E598B2BF5801E00F84C7A /* SecondView.swift */; };
 		9CF990A72BE036EC008C4945 /* CountingGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF990A62BE036EC008C4945 /* CountingGameApp.swift */; };
 		9CF990A92BE036EC008C4945 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF990A82BE036EC008C4945 /* ContentView.swift */; };
 		9CF990AB2BE036EF008C4945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF990AA2BE036EF008C4945 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C5E598B2BF5801E00F84C7A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		9CF990A32BE036EC008C4945 /* CountingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF990A62BE036EC008C4945 /* CountingGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingGameApp.swift; sourceTree = "<group>"; };
 		9CF990A82BE036EC008C4945 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				9CF990A62BE036EC008C4945 /* CountingGameApp.swift */,
 				9CF990A82BE036EC008C4945 /* ContentView.swift */,
+				9C5E598B2BF5801E00F84C7A /* SecondView.swift */,
 				9CF990AA2BE036EF008C4945 /* Assets.xcassets */,
 				9CF990AC2BE036EF008C4945 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C5E598C2BF5801E00F84C7A /* SecondView.swift in Sources */,
 				9CF990A92BE036EC008C4945 /* ContentView.swift in Sources */,
 				9CF990A72BE036EC008C4945 /* CountingGameApp.swift in Sources */,
 			);

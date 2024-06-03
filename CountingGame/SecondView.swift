@@ -10,8 +10,10 @@ import SwiftUI
 struct SecondView: View {
     
     @Environment(\.dismiss) var dismiss
+    @State private var name = ""
     
-    let name:String
+    
+    //let name:String
     @State private var count = 0
     
     @State private var questionArray = [String]()
@@ -28,14 +30,16 @@ struct SecondView: View {
     @State private var alertMessage = ""
     @State private var gameOver = false
     
-   
-   
+   // var questionAnswer: QuestionAndAnswer
+    
+    
     
     
     var body: some View {
         VStack {
             Form {
                 //text field to enter their name
+                TextField("Name", text: $name)
                 Text("Hello \(name)")
                 
                 // text field with multiplication question
@@ -48,12 +52,17 @@ struct SecondView: View {
                 Button {
                     // some code
                 } label: {
-                    Text("Submit")
+                    Text("Submit").bold()
+                }
+                
+                Section {
+                    Text("Score: \(score)")
                 }
                
                 
                 
             }
+            
             
             
             
@@ -82,5 +91,5 @@ struct SecondView: View {
 
 
 #Preview {
-    SecondView(name: "Chlo")
+    SecondView()
 }

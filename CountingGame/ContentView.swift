@@ -76,7 +76,7 @@ struct ContentView: View {
                                     }
                                 }
                             } header: {
-                                Text("Select the times table you would like to test")
+                                Text("Select a multiplication table")
                             }
                             Section {
                                 Picker("Selection number of questions", selection: $numOfQuestion) {
@@ -147,15 +147,12 @@ struct ContentView: View {
                     .navigationTitle("Math is fun!!")
                     .navigationBarTitleDisplayMode(.inline)
                     
-                    
-                    
-                    
-                    
+                     
                 }
                 
             }
             }
-            //function to save user configuration settings and to set up Q and A arrays
+           
             func configureGame() {
 
                 playingGame = true
@@ -175,11 +172,10 @@ struct ContentView: View {
 
                     count += 1
                 }
-                print(questionArray)
-                print(answerArray)
+               
             }
 
-            //set up questions and also check if user's number of questions has met the limit if so end the game
+            // check if user's number of questions has met the limit if so end the game
             func setQuestion() {
                 if currentQuestion != numOfQuestion {
                     let displaysQuestion = questionArray[currentQuestion]
@@ -191,18 +187,18 @@ struct ContentView: View {
                     userAnswer = 0
                 } else {
                     showAlert = true
-                    alertMessage = "Game Over! Start New Game? "
+                    alertMessage = "Game Over! Your score is \(score). Start New Game? "
                     gameOver = true
                 }
             }
 
-            // check if the answer is correct dispaly the correct answer if the user is wrong
+            // check if the answer is correct dispaly alert telling user if it's correct or incorrect.
             func checkAnswer() {
                     if answer == userAnswer {
                         score += 1
                         alertMessage = "Correct!"
                     } else {
-                        score -= 1
+                        score = score
                         alertMessage = "Sorry the answer is \(answer)"
                     }
                     currentQuestion += 1
@@ -210,7 +206,7 @@ struct ContentView: View {
                     setQuestion()
                 }
 
-            //reset game configuration settings and send user back to configuration page to start a new game.
+            //reset game
             func startNewGame() {
                 currentQuestion = 0
                 numOfQuestion = 0
